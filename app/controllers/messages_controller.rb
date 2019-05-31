@@ -1,5 +1,5 @@
 require 'twilio-ruby'
-require_relative '../../apiKeys.rb'
+# require_relative '../../apiKeys.rb'
 
 class MessagesController < ApplicationController
 
@@ -15,8 +15,8 @@ class MessagesController < ApplicationController
 
     def create 
         @message = Message.create(message_params)
-        account_sid = TWILIO_SID
-        auth_token = TWILIO_AUTH_TOKEN
+        account_sid = ''
+        auth_token = 'TWILIO_AUTH_TOKEN'
         client = Twilio::REST::Client.new(account_sid, auth_token)
         from = '+14175516881' # Your Twilio number
         client.messages.create(
