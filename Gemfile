@@ -47,3 +47,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "rack-cors", "~> 1.0"
 
 gem "twilio-ruby", "~> 5.23"
+
+gem "aws-sdk", "~> 3.0"

@@ -15,8 +15,8 @@ class MessagesController < ApplicationController
 
     def create 
         @message = Message.create(message_params)
-        account_sid = ''
-        auth_token = 'TWILIO_AUTH_TOKEN'
+        account_sid = ENV['TWILIO_SID']
+        auth_token = ENV['TWILIO_AUTH_TOKEN']
         client = Twilio::REST::Client.new(account_sid, auth_token)
         from = '+14175516881' # Your Twilio number
         client.messages.create(
